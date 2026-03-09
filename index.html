@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nossa ONG Dezembro Legal conecta pessoas sem condições financeiras para contratar um advogado com advogados que precisam de portfólio e um tutor.">
+    <title>ONG | Dezembro Legal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="18" width="4" height="28" fill="white"/>
+                    <rect x="18" y="18" width="4" height="28" fill="white"/>
+                    <rect x="26" y="18" width="4" height="28" fill="white"/>
+                    <rect x="34" y="18" width="4" height="28" fill="white"/>
+                    <rect x="42" y="18" width="4" height="28" fill="white"/>
+                    <polygon points="28,4 6,18 50,18" fill="white"/>
+                    <rect x="6" y="46" width="44" height="4" fill="white"/>
+                    <rect x="6" y="15" width="44" height="4" fill="white"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="name">DEZEMBRO</span>
+                    <span class="legal">LEGAL<span class="dot"></span></span>
+                </div>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">INÍCIO</a></li>
+                    <li><a href="#como-funciona">COMO FUNCIONA</a></li>
+                    <li><a href="#cadastro">CADASTRO</a></li>
+                    <li><a href="#doacao">DOAÇÃO</a></li>
+                    <li><a href="duvidas.html">DÚVIDAS</a></li>
+                    <li><a href="sobre.html">SOBRE A DL</a></li>
+                    <li><a href="campanhas.html">CAMPANHAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero.png" alt="Pessoa sorrindo - Dezembro Legal" loading="eager">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">O advogado ajuda você e<br>você ajuda o advogado!</h1>
+            <div class="hero-text">
+                <p>Nós conectamos pessoas que se encontram em situação de vulnerabilidade, a advogados e demais profissionais que, acima de tudo, compartilham do nosso sentimento, o sentimento de que: "ajudar uma pessoa, é ajudar o mundo todo"!</p>
+                <p>Trata-se de um projeto solidário, você não terá nenhum custo!</p>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="sobre.html" class="btn btn-primary">Quero saber mais!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONNECT SECTION ===== -->
+    <section class="connect-section fade-in" id="como-funciona">
+        <div class="container">
+            <h2 class="connect-title">Nosso objetivo é conectar!</h2>
+            <div class="connect-cards">
+                <div class="connect-card">
+                    <h3>Cidadão</h3>
+                    <p>Ajudamos as pessoas que precisam de um advogado ou de orientação jurídica, mas não possuem condição de contratar um advogado.</p>
+                    <span class="connect-arrow">❯</span>
+                </div>
+                <div class="connect-card">
+                    <h3>Advogado</h3>
+                    <p>Ajudamos advogados recém formados a obter experiência prática e conhecimento.</p>
+                    <span class="connect-arrow">❯</span>
+                </div>
+                <div class="connect-card">
+                    <h3>Tutor</h3>
+                    <p>Advogados com larga experiência podem dispor de parte de seu tempo em prol de um ideal mais elevado, a ajuda aos necessitados e transmissão de conhecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TAX / DONATION SECTION ===== -->
+    <section class="tax-section fade-in" id="doacao">
+        <div class="container">
+            <div class="tax-inner">
+                <div class="tax-image">
+                    <img src="images/hero.png" alt="Doação" loading="lazy">
+                </div>
+                <div class="tax-content">
+                    <h2>Você pode reduzir seu Imposto de Renda!</h2>
+                    <p>Nós somos uma ONG, sendo assim não temos nenhum tipo de apoio de nenhum órgão público. Dependemos de doações para manter o projeto vivo!</p>
+                    <p>Mas você sabia que doar para uma ONG pode <a href="#" class="highlight-link">reduzir o seu Imposto de Renda</a>? Você paga menos imposto e ainda nos ajuda! Confira mais detalhes:</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline" style="color: #fff; border-color: #fff;">Saiba como aqui!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA CARDS SECTION ===== -->
+    <section class="cta-section fade-in" id="cadastro">
+        <div class="container">
+            <div class="cta-cards">
+                <div class="cta-card">
+                    <h3>Preciso de um advogado!</h3>
+                    <p>Preciso de um advogado para me ajudar, mas não tenho condição financeira pra pagar.</p>
+                    <a href="cadastro-pessoa.html" class="btn btn-primary">Eu sou essa pessoa!</a>
+                </div>
+                <div class="cta-card">
+                    <h3>Sou advogado e quero ajudar!</h3>
+                    <p>Sou advogado e posso dispor de um tempo mínimo para ajudar pessoas ou advogados!</p>
+                    <a href="cadastro-advogado.html" class="btn btn-outline">Sou esse advogado!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLIDARITY BANNER ===== -->
+    <section class="solidarity-banner">
+        <div class="container">
+            <p>Dezembro Legal é um projeto solidário, os envolvidos não terão nenhum tipo de custo, nenhum valor será cobrado de você!</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-bar"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="18" width="4" height="28" fill="white"/>
+                        <rect x="18" y="18" width="4" height="28" fill="white"/>
+                        <rect x="26" y="18" width="4" height="28" fill="white"/>
+                        <rect x="34" y="18" width="4" height="28" fill="white"/>
+                        <rect x="42" y="18" width="4" height="28" fill="white"/>
+                        <polygon points="28,4 6,18 50,18" fill="white"/>
+                        <rect x="6" y="46" width="44" height="4" fill="white"/>
+                        <rect x="6" y="15" width="44" height="4" fill="white"/>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="name">DEZEMBRO</span>
+                        <span class="legal">LEGAL<span class="dot"></span></span>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-info">
+                    <p class="solidarity"><em>Dezembro Legal é um projeto solidário, os envolvidos não terão nenhum tipo de custo, nenhum valor será cobrado de você!</em></p>
+                    <p>Rua Princesa Leopoldina, 373 letra A, Ipiranga. Belo Horizonte/MG</p>
+                    <p>E-mail: <a href="mailto:legaldezembro@gmail.com">legaldezembro@gmail.com</a></p>
+                    <p>Telefone/Whatsapp (31) XXXX-XXXX</p>
+                    <p>CNPJ: xx.xxx.xxxx/xxxx</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Voltar ao topo">▲</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

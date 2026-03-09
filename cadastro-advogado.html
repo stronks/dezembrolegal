@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como advogado voluntário na Dezembro Legal. Ajude pessoas em situação de vulnerabilidade e ganhe experiência prática.">
+    <title>Cadastro Advogado | Dezembro Legal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="18" width="4" height="28" fill="white"/>
+                    <rect x="18" y="18" width="4" height="28" fill="white"/>
+                    <rect x="26" y="18" width="4" height="28" fill="white"/>
+                    <rect x="34" y="18" width="4" height="28" fill="white"/>
+                    <rect x="42" y="18" width="4" height="28" fill="white"/>
+                    <polygon points="28,4 6,18 50,18" fill="white"/>
+                    <rect x="6" y="46" width="44" height="4" fill="white"/>
+                    <rect x="6" y="15" width="44" height="4" fill="white"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="name">DEZEMBRO</span>
+                    <span class="legal">LEGAL<span class="dot"></span></span>
+                </div>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="index.html#como-funciona">COMO FUNCIONA</a></li>
+                    <li><a href="index.html#cadastro">CADASTRO</a></li>
+                    <li><a href="index.html#doacao">DOAÇÃO</a></li>
+                    <li><a href="duvidas.html">DÚVIDAS</a></li>
+                    <li><a href="sobre.html">SOBRE A DL</a></li>
+                    <li><a href="campanhas.html">CAMPANHAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Seleção de advogados!</h1>
+            <p>Confira todas as etapas abaixo:</p>
+        </div>
+    </section>
+
+    <!-- ===== STEPS ===== -->
+    <section class="cadastro-section fade-in">
+        <div class="container">
+            <div class="cadastro-steps">
+                <div class="cadastro-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Cadastro</h3>
+                        <p>Você está prestes a realizar o seu cadastro como advogado voluntário. Após o envio dos seus dados, a equipe da Dezembro Legal poderá entrar em contato para validar algumas informações prestadas por você, podendo, ainda, coletar mais dados e documentos, tudo por meio digital (WhatsApp ou e-mail). Fique atento aos canais de comunicação oficial da Dezembro Legal, confira o número do WhatsApp e e-mail, e na dúvida, ligue pra gente!</p>
+                    </div>
+                </div>
+                <div class="cadastro-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Validação</h3>
+                        <p>Essa etapa é toda com a gente! Iremos avaliar seus documentos e dados podendo aprovar ou não seu cadastro. Caso a equipe encontre alguma inconsistência, entraremos em contato por e-mail, telefone ou WhatsApp, e isto, mesmo se seu cadastro não for aceito. Estando tudo certo, vamos para última etapa!</p>
+                    </div>
+                </div>
+                <div class="cadastro-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Seleção de advogado voluntário!</h3>
+                        <p>Depois de ter seu cadastro aprovado a Dezembro Legal entrará em contato para saber da sua disponibilidade, fazendo a conexão entre você, nosso público alvo e o advogado tutor. Você deverá acompanhar a pessoa selecionada pela equipe da Dezembro Legal, devendo prestar todo auxílio ou orientação necessária. Sendo possível, deverá ainda chamar os envolvidos para um bate papo, e isto, com auxílio de um outro advogado de grande experiência na área - o advogado tutor, podendo receber o suporte necessário da equipe da Dezembro Legal. Não havendo consenso, a você poderá ser delegada a responsabilidade de ajuizar a competente ação judicial com auxílio de um advogado tutor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FORM ===== -->
+            <div class="cadastro-form-section fade-in">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Cadastro de Advogado Voluntário</h2>
+                <form class="cadastro-form" id="cadastroAdvogadoForm">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="text" placeholder="Número da OAB" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="tel" placeholder="Telefone/WhatsApp" required>
+                    <input type="text" placeholder="Cidade" required>
+                    <input type="text" placeholder="Estado" required>
+                    <select class="full-width" required>
+                        <option value="" disabled selected>Área de atuação</option>
+                        <option value="civil">Direito Civil</option>
+                        <option value="trabalhista">Direito Trabalhista</option>
+                        <option value="familia">Direito de Família</option>
+                        <option value="criminal">Direito Criminal</option>
+                        <option value="consumidor">Direito do Consumidor</option>
+                        <option value="previdenciario">Direito Previdenciário</option>
+                        <option value="administrativo">Direito Administrativo</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <textarea class="full-width" placeholder="Observações ou informações adicionais"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                </form>
+                <div class="cadastro-success">
+                    <p>✅ Tudo certo! Iremos te retornar em breve!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLIDARITY BANNER ===== -->
+    <section class="solidarity-banner">
+        <div class="container">
+            <p>Dezembro Legal é um projeto solidário, os envolvidos não terão nenhum tipo de custo, nenhum valor será cobrado de você!</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-bar"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="18" width="4" height="28" fill="white"/>
+                        <rect x="18" y="18" width="4" height="28" fill="white"/>
+                        <rect x="26" y="18" width="4" height="28" fill="white"/>
+                        <rect x="34" y="18" width="4" height="28" fill="white"/>
+                        <rect x="42" y="18" width="4" height="28" fill="white"/>
+                        <polygon points="28,4 6,18 50,18" fill="white"/>
+                        <rect x="6" y="46" width="44" height="4" fill="white"/>
+                        <rect x="6" y="15" width="44" height="4" fill="white"/>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="name">DEZEMBRO</span>
+                        <span class="legal">LEGAL<span class="dot"></span></span>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-info">
+                    <p class="solidarity"><em>Dezembro Legal é um projeto solidário, os envolvidos não terão nenhum tipo de custo, nenhum valor será cobrado de você!</em></p>
+                    <p>Rua Princesa Leopoldina, 373 letra A, Ipiranga. Belo Horizonte/MG</p>
+                    <p>E-mail: <a href="mailto:legaldezembro@gmail.com">legaldezembro@gmail.com</a></p>
+                    <p>Telefone/Whatsapp (31) XXXX-XXXX</p>
+                    <p>CNPJ: xx.xxx.xxxx/xxxx</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Voltar ao topo">▲</button>
+    <script src="script.js"></script>
+</body>
+</html>
