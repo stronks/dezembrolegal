@@ -729,38 +729,206 @@ h1, h2, h3, h4, h5 {
     line-height: 1.9;
 }
 
-.campaign-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
+.gallery-section {
+    margin-bottom: 3.5rem;
 }
 
-.campaign-card {
+.gallery-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid var(--orange);
+}
+
+.gallery-header h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-thumb {
+    position: relative;
     border-radius: var(--radius);
     overflow: hidden;
-    transition: all var(--transition);
+    cursor: pointer;
     box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    aspect-ratio: 4 / 3;
 }
 
-.campaign-card:hover {
-    transform: translateY(-5px);
+.gallery-thumb:hover {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
-.campaign-card img {
+.gallery-thumb img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.campaign-card h4 {
-    font-size: 0.95rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    padding: 1rem 1rem 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.gallery-thumb:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-thumb .thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.gallery-thumb:hover .thumb-overlay {
+    background: rgba(0,0,0,0.35);
+}
+
+.thumb-overlay .zoom-icon {
+    color: var(--white);
+    font-size: 2rem;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+
+.gallery-thumb:hover .thumb-overlay .zoom-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =============================================
+   IMAGE MODAL / LIGHTBOX
+   ============================================= */
+.modal-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+}
+
+.modal-lightbox.active {
+    display: flex;
+}
+
+.modal-lightbox img {
+    max-width: 90vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 10001;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background var(--transition);
+}
+
+.modal-close:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+    z-index: 10001;
+}
+
+.modal-nav:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.modal-nav.prev {
+    left: 1rem;
+}
+
+.modal-nav.next {
+    right: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.modal-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+}
+
+.modal-download:hover {
+    background: var(--orange-hover);
+    transform: translateY(-1px);
+}
+
+.modal-counter {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 /* =============================================
